@@ -31,8 +31,8 @@ order by 1,2
 
 Select location, population, MAX(total_cases) as HighestInfectioncount,  (MAX(Total_cases)/population)*100 as PercentPopulationInfected
 From dbo.Rip 
-group by location, population
 where continent is not null
+group by location, population
 order by PercentPopulationInfected DESC
 
 -- ANS : "Andorra" has a highest infection rate when compared with pop.
